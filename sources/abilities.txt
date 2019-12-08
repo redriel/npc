@@ -1,0 +1,12 @@
+Strength-powerful, brawny, strong as an ox	
+Strength-feeble, scrawny
+Dexterity-lithe, agile, graceful	
+Dexterity-clumsy, fumbling
+Constitution-hardy, hale, healthy	
+Constitution-sickly, pale
+Intelligence-studious, learned, inquisitive	
+Intelligence-dim-witted, slow
+Wisdom-perceptive, spiritual, insightful	
+Wisdom-oblivious, absentminded
+Charisma-persuasive, forceful, born leader	
+Charisma-dull, boring
