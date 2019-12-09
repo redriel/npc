@@ -1,0 +1,13 @@
+#THIS IS THE RACE LIST
+#WRITE YOUR RACES UNDER HERE
+imperial
+ya'qub
+cimmerian
+white elf
+gray elf
+firren
+kobold
+drow
+dwarf
+halfblood tiefling
+impure tiefling
