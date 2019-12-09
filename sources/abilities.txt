@@ -1,3 +1,5 @@
+#THIS IS THE ABILITY LIST
+#WRITE YOUR ABILITY UNDER HERE
 Strength-powerful, brawny, strong as an ox	
 Strength-feeble, scrawny
 Dexterity-lithe, agile, graceful	

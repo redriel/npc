@@ -1,3 +1,5 @@
+#THIS IS THE TALENT LIST
+#WRITE YOUR TALENTS UNDER HERE
 Plays a musical instrument
 Speaks several languages fluently
 Unbelievably lucky
@@ -17,4 +19,4 @@ Expert dart thrower and rock skipper
 Expert juggler
 Skilled actor and master of disguise
 Skilled dancer
-Knows thieves' cant
+Knows thieves chant
