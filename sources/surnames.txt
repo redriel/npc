@@ -1,5 +1,3 @@
-#THIS IS THE SURNAME LIST
-#WRITE YOUR SURNAMES UNDER HERE
 Abawi
 Allard
 Adara
@@ -230,7 +228,7 @@ Chalk
 Chambers
 Callahan
 Cirque
-Cabrera-Bello
+Cabrera
 Cherry
 Cannon
 Chung

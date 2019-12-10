@@ -1,28 +1,23 @@
-#THIS IS THE APPEARANCE LIST
-#WRITE YOUR APPEARANCE UNDER HERE
-Distinctive jewelry
-Piercings
-Flamboyant or outlandish clothes
-Formal, clean clothes
-Ragged, dirty clothes
-Pronounced scar
-Missing teeth
-Missing fingers
-Unusual eye color (or two different colors)
-Tattoos
-Birthmark
-Unusual skin color
-Bald
-Braided beard or hair
-Unusual hair color
-Nervous eye twitch
-Distinctive nose
-Distinctive posture (crooked or rigid)
-Exceptionally beautiful
-Exceptionally ugly
-Strange accent
-Suspicious and tricky
-Nobil and fierce
-Mumbling to himself/herself, lunatic
-Long beard 
-Long hairs 
+distinctive jewelry
+piercings
+outlandish clothes
+formal, clean clothes
+ragged, dirty clothes
+a pronounced scar
+one less teeth
+one less finger
+an unusual eyes color
+tribal tattoos
+an unusual skin color
+no hair
+braided hair
+an unusual hair color
+a nervous eye twitch
+a distinctive nose
+a distinctive posture
+a charming smile
+no charm or kindness
+a strange accent
+a suspicious way of talinkg
+a fierce expression
+a lunatic expression 

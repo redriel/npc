@@ -1,5 +1,20 @@
-#THIS IS THE ORIGIN LIST
-#WRITE YOUR ORIGINS UNDER HERE
 commoner
 nobil
 merchant
+old-time adventurer
+novice adventurer
+figher
+secretly an expert of magic
+ex-slave
+slave
+farmer
+member of the clergy
+scholar
+stray explorer
+traveller
+mercenary
+ringed adventurer
+chevallier
+bandit
+outlaw
+guard

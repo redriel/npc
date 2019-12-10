@@ -1,22 +1,21 @@
-#THIS IS THE TALENT LIST
-#WRITE YOUR TALENTS UNDER HERE
-Plays a musical instrument
-Speaks several languages fluently
-Unbelievably lucky
-Perfect memory
-Great with animals
-Great with children
-Great at solving puzzles
-Great at one game
-Great at impersonations
-Draws beautifully
-Paints beautifully
-Sings beautifully
-Drinks everyone under the table
-Expert carpenter
-Expert cook
-Expert dart thrower and rock skipper
-Expert juggler
-Skilled actor and master of disguise
-Skilled dancer
-Knows thieves chant
+plays a musical instrument very well
+can speak several languages fluently
+can build almost everything with wood
+can easily survive in the wild
+can easily lie and bargain
+has a dirty secret
+has a little treasure somewhere
+has perfect memory
+is a great artist
+is a great drinker
+is unbelievably lucky
+is a skilled actor and master of disguise
+is a skilled dancer and seducer
+is great with animals
+is great at solving puzzles
+knows thieves chants
+knows something about magic
+knows something about the gods words
+has killed someone in the past
+knows how to fight unarmed
+knows how to fight with weapons

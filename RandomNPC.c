@@ -10,9 +10,9 @@
 #define NUMBER_OF_NAMES 198
 #define NUMBER_OF_SURNAMES 973
 #define NUMBER_OF_ABILITIES 12
-#define NUMBER_OF_APPEREANCES 26
-#define NUMBER_OF_TALENTS 20
-#define NUMBER_OF_ORIGINS 3
+#define NUMBER_OF_APPEREANCES 23
+#define NUMBER_OF_TALENTS 21
+#define NUMBER_OF_ORIGINS 20
 #define NUMBER_OF_RACES 11
 
 #define BUFF_SIZE_SHORT 32
@@ -35,13 +35,13 @@ struct mynpc{
     char talents[BUFF_SIZE_LONG];
     char origins[BUFF_SIZE_LONG];
     char gender[BUFF_SIZE_SHORT];
+    char pronoun[BUFF_SIZE_SHORT];
+    char vibes[BUFF_SIZE_LONG];
 } npc;
 
 static char* pickName();
 
 static char* pickSurname();
-
-static char* pickGender();
 
 static char* pickOrigins();
 
@@ -52,6 +52,8 @@ static char* pickAppearance();
 static char* pickAbilities();
 
 static char* pickRace();
+
+static int pickGender();
 
 static int randomizer(int number);
 
@@ -67,13 +69,24 @@ int main() {
     strcpy(npc.abilities, pickAbilities());
     strcpy(npc.origins, pickOrigins());
     strcpy(npc.appearance, pickAppearance());
-    strcpy(npc.gender, pickGender());
+
+    char lownoun[BUFF_SIZE_SHORT];
+    if (pickGender()) {
+        strcpy(npc.gender, "male");
+        strcpy(npc.pronoun, "He");
+        strcpy(lownoun, "he");
+    } else {
+        strcpy(npc.gender, "female");
+        strcpy(npc.pronoun, "She");
+        strcpy(lownoun, "she");
+    }
 
     printf("You meet a %s %s named %s %s.\n", npc.gender, npc.race, npc.name, npc.surname);
-    printf("%s seems capable of %s.\n", npc.name, npc.talents);
-    printf("The abilities is: %s\n", npc.abilities);
-    printf("The origin is: %s\n", npc.origins);
-    printf("The appereance is: %s\n", npc.appearance);
+    printf("%s appears %s.\n", npc.name, npc.abilities);
+    printf("You notice %s has %s.\n", lownoun, npc.appearance);
+    printf("%s tells you %s is a %s.\n", npc.pronoun, lownoun, npc.origins);
+    printf("Few knows that %s %s.\n", npc.name, npc.talents);
+    printf("%s seems friedly towards you.\n", npc.name);
 
     printf("--- End of program ---\n");
     printf("(press any key to exit)");
@@ -174,9 +187,9 @@ static char* pickOrigins() {
     
     int count = 0;
     char line[BUFF_SIZE_LONG]; 
-    for (count = 0; (fgets(line, sizeof line, fp_origins) != NULL); count++) {
+    for (count = 0; (fgets(local_origin, sizeof local_origin, fp_origins) != NULL); count++) {
         if (count == randomLine) {
-            fscanf(fp_origins, "%s", &local_origin);
+            strtok(local_origin, "\n");
             strcpy(origin, local_origin);
         } 
     }
@@ -241,7 +254,7 @@ static char* pickRace() {
     FILE *fp_race = fopen("./sources/races.txt", "r");
     char *race = malloc(BUFF_SIZE_LONG * sizeof(char));
     char local_race[BUFF_SIZE_LONG];
-    int randomLine = randomizer(NUMBER_OF_TALENTS);
+    int randomLine = randomizer(NUMBER_OF_RACES);
 
     if (!fp_race) {
         fprintf(stderr, "%s: line %d. Error #%d opening file races.txt: %s.\n", 
@@ -263,14 +276,8 @@ static char* pickRace() {
     return race;
 }
 
-static char * pickGender() {
-    char *gender = malloc(BUFF_SIZE_SHORT * sizeof(char));
-    int _gender = randomizer(1);
-    if (_gender) {
-        strcpy(gender, "male");
-    } else {
-        strcpy(gender, "female");
-    }
+static int pickGender() {
+    int gender = randomizer(2);
     return gender;
 }
 
