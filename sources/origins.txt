@@ -3,7 +3,7 @@ nobil
 merchant
 old-time adventurer
 novice adventurer
-figher
+fighter
 secretly an expert of magic
 ex-slave
 slave

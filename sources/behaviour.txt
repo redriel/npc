@@ -1,0 +1,9 @@
+friendly towards you
+hostile towards you
+scared of you
+happy to see you
+doubtful about you
+interested in you
+angry with you
+impressed by you
+not interested in you
