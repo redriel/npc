@@ -19,28 +19,6 @@
 #define BUFF_SIZE_SHORT 32
 #define BUFF_SIZE_LONG 256
 
-/**
-  *
-  * @version: 1.0.0
-  * @date: 2019/8/12
-  * @author: Gabriele Lavorato
-  * This program randomly generates a detailed NPC
-  */
-
-struct mynpc{
-    char name[BUFF_SIZE_SHORT];
-    char surname[BUFF_SIZE_SHORT];
-    char race[BUFF_SIZE_SHORT];
-    char appearance[BUFF_SIZE_LONG];
-    char abilities[BUFF_SIZE_LONG];
-    char talents[BUFF_SIZE_LONG];
-    char origins[BUFF_SIZE_LONG];
-    char behaviour[BUFF_SIZE_LONG];
-    char gender[BUFF_SIZE_SHORT];
-    char pronoun[BUFF_SIZE_SHORT];
-    char vibes[BUFF_SIZE_LONG];
-} npc;
-
 static char* pickName();
 
 static char* pickSurname();
@@ -58,73 +36,6 @@ static char* pickRace();
 static char* pickBehaviour();
 
 static int pickGender();
-
-static int randomizer(int number);
-
-
-int main() {
-    printf("\n");
-    printf("#############################################\n");
-    printf("##          NPC RANDOM GENERATOR           ##\n");
-    printf("#############################################\n");
-    printf("\n");
-    printf("         />_________________________________\n");
-    printf("[########[]_________________________________>\n");
-    printf("         \\>\n");
-    printf("\n");
-    printf("Welcome to NPC RG. If you want to generate an NPC,\n");
-    printf("simply type [generate] or [g].\n");
-    printf("If you want to see the options or other details,\n");
-    printf("type [help] or [h].\n");
-    printf("If you want to exit, type [x].\n\n");
-    fflush(stdin);
-
-    int status = 1;
-    char command[BUFF_SIZE_SHORT];
-
-    while(status) {
-        fgets(command,BUFF_SIZE_SHORT,stdin);
-        if(strcmp(command, "generate") == 0 || strcmp(command, "g") == 0 ) {
-            printf("you asked me to generate an npc.\n");
-        }
-        else if(strcmp(command, "x") == 0) {
-            printf("Now closing.");
-            status = 0;
-        }
-    }
-
-    strcpy(npc.name, pickName());
-    strcpy(npc.surname, pickSurname());
-    strcpy(npc.race, pickRace());
-    strcpy(npc.talents, pickTalent());
-    strcpy(npc.abilities, pickAbilities());
-    strcpy(npc.origins, pickOrigins());
-    strcpy(npc.appearance, pickAppearance());
-    strcpy(npc.behaviour, pickBehaviour());
-
-    char lownoun[BUFF_SIZE_SHORT];
-    if (pickGender()) {
-        strcpy(npc.gender, "male");
-        strcpy(npc.pronoun, "He");
-        strcpy(lownoun, "he");
-    } else {
-        strcpy(npc.gender, "female");
-        strcpy(npc.pronoun, "She");
-        strcpy(lownoun, "she");
-    }
-
-    printf("You meet a %s %s named %s %s.\n", npc.gender, npc.race, npc.name, npc.surname);
-    printf("%s appears %s.\n", npc.name, npc.abilities);
-    printf("You notice %s has %s.\n", lownoun, npc.appearance);
-    printf("%s tells you %s is a %s.\n", npc.pronoun, lownoun, npc.origins);
-    printf("Few knows that %s %s.\n", npc.name, npc.talents);
-    printf("%s seems %s.\n", npc.name, npc.behaviour);
-
-    printf("--- End of program ---\n");
-    printf("(press any key to exit)");
-    getchar();
-    exit(EXIT_SUCCESS);
-}
 
 static char* pickName() {
     FILE *fp_names = fopen("./sources/names.txt", "r");
@@ -337,10 +248,4 @@ static char* pickBehaviour() {
 static int pickGender() {
     int gender = randomizer(2);
     return gender;
-}
-
-static int randomizer(int max_value) {
-    srand(time(NULL)^ (getpid()<<16)) ;
-    int r = rand() % max_value;
-    return r;
 }
