@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Folder to exclude
+=======
+# Folders to exclude
+>>>>>>> develop
 ./.vscode
 
 # Files to exlude
