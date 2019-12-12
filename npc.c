@@ -17,7 +17,7 @@ int main(int argc, char *argv[]) {
         message_init();
         exit(EXIT_FAILURE);
     } else {
-        struct npc npc = generateNPC(argv);
+        struct npc npc = generateNPC(argc, argv);
         print_npc(npc);
         exit(EXIT_SUCCESS);
     }
