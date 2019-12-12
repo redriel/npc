@@ -5,7 +5,6 @@
 #include <unistd.h>
 #include <unistd.h>
 #include <time.h>
-#include "npcutils.h"
 
 // To get the number to insert, just subtract 2 from the number of file lines
 #define NUMBER_OF_NAMES 198
