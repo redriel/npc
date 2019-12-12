@@ -6,25 +6,9 @@
 #include <errno.h>
 #include "npcutils.h"
 #include "npcgenerator.h"
+#include "npcpaths.h"
 
-#define BUFF_SIZE_SHORT 32
-#define BUFF_SIZE_LONG 256
-
-typedef struct npc generated_npc;
-
-typedef struct npc{
-    char name[BUFF_SIZE_SHORT];
-    char surname[BUFF_SIZE_SHORT];
-    char race[BUFF_SIZE_SHORT];
-    char appearance[BUFF_SIZE_LONG];
-    char abilities[BUFF_SIZE_LONG];
-    char talents[BUFF_SIZE_LONG];
-    char origins[BUFF_SIZE_LONG];
-    char behaviour[BUFF_SIZE_LONG];
-    char gender[BUFF_SIZE_SHORT];
-    char pronoun[BUFF_SIZE_SHORT];
-    char vibes[BUFF_SIZE_LONG];
-} npc;
+#define BUFF_SIZE 256
 
 int randomizer(int max_value) {
     srand(time(NULL)^(getpid()<<16)) ;
@@ -32,12 +16,12 @@ int randomizer(int max_value) {
     return r;
 }
 
-int fileLenght(char * file_address) {
+int file_length(char * file_path) {
     int lines = 0, ch = 0;
-    FILE *fp = fopen(file_address, "r");
+    FILE *fp = fopen(file_path, "r");
     if (!fp) {
         fprintf(stderr, "%s: line %d. Error #%d opening file %s: %s.\n", 
-        __FILE__, __LINE__, errno, file_address, strerror(errno));
+        __FILE__, __LINE__, errno, file_path, strerror(errno));
         exit(EXIT_FAILURE);
     }
     while(!feof(fp)) {
@@ -46,12 +30,21 @@ int fileLenght(char * file_address) {
             lines++;
         }
     }
+    fclose(fp);
     return lines;
 }
 
-struct npc generateNPC(char * arguments) {
-    struct npc generated_npc;
-    return generated_npc;
+struct npc generateNPC(char * arguments[]) {
+    struct npc npc;
+    strcpy(npc.name, pickLine(NAMES_PATH));
+    strcpy(npc.surname, pickLine(SURNAMES_PATH));
+    strcpy(npc.race, pickLine(RACES_PATH));
+    strcpy(npc.abilities, pickLine(ABILITIES_PATH));
+    strcpy(npc.appearance, pickLine(APPEARANCES_PATH));
+    strcpy(npc.talents, pickLine(TALENTS_PATH));
+    strcpy(npc.behaviour, pickLine(BEHAVIOURS_PATH));
+    // gnpc.gender = pickGender();
+    return npc;
 }
 
 void message_init() {
@@ -77,6 +70,6 @@ void message_npc() {
 
 }
 
-void save_npc(){
+void save_npc(char * file_path){
 
 }

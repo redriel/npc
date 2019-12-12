@@ -1,13 +1,5 @@
-#ifndef NPC_PICK
-#define NPC_PICK
-
-char* pickName();
-char* pickSurname();
-char* pickRace();
-char* pickAbilities();
-char* pickAppearance();
-char* pickOrigins();
-char* pickTalent();
-char* pickBehaviour();
+#ifndef NPC_GENERATOR
+#define NPC_GENERATOR
+char * pickLine(char * file_path);
 int pickGender();
 #endif
