@@ -19,25 +19,7 @@
 #define BUFF_SIZE_SHORT 32
 #define BUFF_SIZE_LONG 256
 
-static char* pickName();
-
-static char* pickSurname();
-
-static char* pickOrigins();
-
-static char* pickTalent();
-
-static char* pickAppearance();
-
-static char* pickAbilities();
-
-static char* pickRace();
-
-static char* pickBehaviour();
-
-static int pickGender();
-
-static char* pickName() {
+char* pickName() {
     FILE *fp_names = fopen("./sources/names.txt", "r");
     char *name = malloc(BUFF_SIZE_SHORT * sizeof(char));
     char local_name[BUFF_SIZE_SHORT];
@@ -63,7 +45,7 @@ static char* pickName() {
     return name;
 }
 
-static char* pickSurname() {
+char* pickSurname() {
     FILE *fp_surnames = fopen("./sources/surnames.txt", "r");
     char *surname = malloc(BUFF_SIZE_SHORT * sizeof(char));
     char local_surname[BUFF_SIZE_SHORT];
@@ -89,7 +71,7 @@ static char* pickSurname() {
     return surname;
 }
 
-static char* pickAbilities() {
+char* pickAbilities() {
     FILE *fp_abilities = fopen("./sources/abilities.txt", "r");
     char *ability = malloc(BUFF_SIZE_LONG * sizeof(char));
     char local_ability[BUFF_SIZE_LONG];
@@ -115,7 +97,7 @@ static char* pickAbilities() {
     return ability;
 }
 
-static char* pickOrigins() {
+char* pickOrigins() {
     FILE *fp_origins = fopen("./sources/origins.txt", "r");
     char *origin = malloc(BUFF_SIZE_LONG * sizeof(char));
     char local_origin[BUFF_SIZE_LONG];
@@ -141,7 +123,7 @@ static char* pickOrigins() {
     return origin;
 }
 
-static char* pickAppearance() {
+char* pickAppearance() {
     FILE *fp_appearance = fopen("./sources/appearance.txt", "r");
     char *appearance = malloc(BUFF_SIZE_SHORT * sizeof(char));
     char local_appearance[BUFF_SIZE_SHORT];
@@ -167,7 +149,7 @@ static char* pickAppearance() {
     return appearance;
 }
 
-static char* pickTalent() {
+char* pickTalent() {
     FILE *fp_talent = fopen("./sources/talents.txt", "r");
     char *talent = malloc(BUFF_SIZE_LONG * sizeof(char));
     char local_talent[BUFF_SIZE_LONG];
@@ -193,7 +175,7 @@ static char* pickTalent() {
     return talent;
 }
 
-static char* pickRace() {
+char* pickRace() {
     FILE *fp_race = fopen("./sources/races.txt", "r");
     char *race = malloc(BUFF_SIZE_LONG * sizeof(char));
     char local_race[BUFF_SIZE_LONG];
@@ -219,7 +201,7 @@ static char* pickRace() {
     return race;
 }
 
-static char* pickBehaviour() {
+char* pickBehaviour() {
     FILE *fp_behaviour = fopen("./sources/behaviour.txt", "r");
     char *behaviour = malloc(BUFF_SIZE_LONG * sizeof(char));
     char local_behaviour[BUFF_SIZE_LONG];
@@ -245,7 +227,7 @@ static char* pickBehaviour() {
     return behaviour;
 }
 
-static int pickGender() {
+int pickGender() {
     int gender = randomizer(2);
     return gender;
 }
