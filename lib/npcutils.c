@@ -8,8 +8,6 @@
 #include "npcgenerator.h"
 #include "npcpaths.h"
 
-#define BUFF_SIZE 256
-
 int randomizer(int max_value) {
     srand(time(NULL)^(getpid()<<16)) ;
     int r = rand() % max_value;
@@ -42,8 +40,17 @@ struct npc generateNPC(char * arguments[]) {
     strcpy(npc.abilities, pickLine(ABILITIES_PATH));
     strcpy(npc.appearance, pickLine(APPEARANCES_PATH));
     strcpy(npc.talents, pickLine(TALENTS_PATH));
+    strcpy(npc.origins, pickLine(ORIGINS_PATH));
     strcpy(npc.behaviour, pickLine(BEHAVIOURS_PATH));
-    // gnpc.gender = pickGender();
+    if(pickGender()) {
+        strcpy(npc.gender, "male");
+        strcpy(npc.pronoun_upper, "He");
+        strcpy(npc.pronoun_lower, "he");
+    } else {
+        strcpy(npc.gender, "female");
+        strcpy(npc.pronoun_upper, "She");
+        strcpy(npc.pronoun_lower, "she");
+    }
     return npc;
 }
 
@@ -62,14 +69,23 @@ void message_init() {
     printf("If you want to see the options or other details, type [npc] follwed by [help] or [h].\n");
 }
 
-void message_help() {
+void print_npc(npc npc) {
+    printf("You meet a %s %s named %s %s.\n", npc.gender, npc.race, npc.name, npc.surname);
+    printf("%s appears %s.\n", npc.name, npc.abilities);
+    printf("You notice %s has %s.\n", npc.pronoun_lower, npc.appearance);
+    printf("%s tells you %s is a %s.\n", npc.pronoun_upper, npc.pronoun_lower, npc.origins);
+    printf("Few knows that %s %s.\n", npc.name, npc.talents);
+    printf("%s seems %s.\n", npc.name, npc.behaviour);
+}
 
+void message_help() {
+    // to define
 }
 
 void message_npc() {
-
+    // to define
 }
 
 void save_npc(char * file_path){
-
+    // to define
 }

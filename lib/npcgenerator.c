@@ -23,7 +23,7 @@ char * pickLine(char * file_path) {
     
     for (int i = 0; (fgets(line, sizeof line, fp_names) != NULL); i++) {
         if (i == randomLine) {
-            fscanf(fp_names, "%s", &line);
+            strtok(line, "\n");
             strcpy(chosen_line, line);
         } 
     }
