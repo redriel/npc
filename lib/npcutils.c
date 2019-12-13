@@ -215,7 +215,22 @@ void message_error() {
 }
 
 void message_help() {
-    printf("This is an help message.");
+    printf("Usage:\n");
+    printf(">> npc g: you will generate a complete random npc\n");
+    printf(">> npc s: you will generate a complete random npc and save it as .txt file under /saved\n");
+    printf("\n");
+    printf("Options:\n");
+    printf("You can fix some elements of your character including gender and race:\n");
+    printf(">> npc g male: you will generate a complemete random male NPC\n");
+    printf(">> npc s drow: you will save a complete random drow NPC\n");
+    printf("\n");
+    printf("NOTE: you can fix gender and race togheter, but you have to choose gender first:\n");
+    printf(">> npc g male kobold\n");
+    printf("\n");
+    printf("If your desired race is longer than one word, you should put it quotation marks:\n");
+    printf(">> npc s \"white elf\"\n");
+    printf("\n");
+    printf("You can fully customize races, names, talents and so on. Just edit the files in /sources.");
 } 
 
 void save_npc(npc npc, char * file_path){
