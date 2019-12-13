@@ -13,22 +13,22 @@ char * pickLine(char * file_path) {
     char *chosen_line = malloc (sizeof (char) * BUFF_SIZE);
     char line[BUFF_SIZE];
     int randomLine = randomizer(file_length(file_path));
-    FILE *fp_names = fopen(file_path, "r");
+    FILE *fp = fopen(file_path, "r");
 
-    if (!fp_names) {
+    if (!fp) {
         fprintf(stderr, "%s: line %d. Error #%d opening %s: %s.\n", 
         __FILE__, __LINE__, errno, file_path, strerror(errno));
         exit(EXIT_FAILURE);
     }
     
-    for (int i = 0; (fgets(line, sizeof line, fp_names) != NULL); i++) {
+    for (int i = 0; (fgets(line, sizeof line, fp) != NULL); i++) {
         if (i == randomLine) {
             strtok(line, "\n");
             strcpy(chosen_line, line);
         } 
     }
 
-    fclose(fp_names);
+    fclose(fp);
     return chosen_line;
 }
 
