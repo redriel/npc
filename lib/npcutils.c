@@ -168,16 +168,14 @@ int argv_validator(int length, char * arguments[]) {
 
 int race_validator(char * race) {
     int result = 0;
-    char * line = NULL;
+    char line[BUFF_SIZE_MEDIUM];
     FILE *fp = fopen(RACES_PATH, "r");
     if (!fp) {
         fprintf(stderr, "%s: line %d. Error #%d opening %s: %s.\n", 
         __FILE__, __LINE__, errno, RACES_PATH, strerror(errno));
         exit(EXIT_FAILURE);
     }
-    size_t len = 0;
-    ssize_t read;
-    while ((read = getline(&line, &len, fp)) != -1) {
+    while (fgets(line, sizeof line, fp) != NULL) {
         if (strcmp(strtok(line, "\n"), race) == 0) {
             result++;
         } 
