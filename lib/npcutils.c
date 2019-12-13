@@ -96,6 +96,21 @@ struct npc generateNPC(int length, char * arguments[]) {
             strcat(npc_file_path, ".txt");
             save_npc(npc, npc_file_path);
         } if (code == 8) {
+            if(strcmp(arguments[2], "male") == 0) {
+                strcpy(npc.gender, "male");
+                strcpy(npc.pronoun_upper, "He");
+                strcpy(npc.pronoun_lower, "he");
+            } else if(strcmp(arguments[2], "female") == 0) {
+                strcpy(npc.gender, "female");
+                strcpy(npc.pronoun_upper, "She");
+                strcpy(npc.pronoun_lower, "she");
+            } char npc_file_path [BUFF_SIZE_MEDIUM] = SAVED_NPCS_PATH;
+            strcat(npc_file_path, npc.name);
+            strcat(npc_file_path, " ");
+            strcat(npc_file_path, npc.surname);
+            strcat(npc_file_path, ".txt");
+            save_npc(npc, npc_file_path);
+        } if (code == 9) {
             strcpy(npc.race, arguments[3]);
             if(strcmp(arguments[2], "male") == 0) {
                 strcpy(npc.gender, "male");
@@ -124,7 +139,11 @@ int argv_validator(int length, char * arguments[]) {
         return code = 1;
     } else if (length == 3 && (strcmp(arguments[2], "male") == 0) ||
         length == 3 && (strcmp(arguments[2], "female") == 0)) {
+            if(strcmp(arguments[1], "g") == 0) {
             return code = 2;
+            } else if (strcmp(arguments[1], "s") == 0) {
+                return code = 8;
+            } else return code = 0;
     } else if (length == 3 && race_validator(arguments[2]) == 1 ) {
         if (strcmp(arguments[1], "g") == 0) {
             return code = 3;
@@ -133,10 +152,10 @@ int argv_validator(int length, char * arguments[]) {
         } else return code = 0;
     } else if (length == 4 && (strcmp(arguments[2], "male") == 0) && race_validator(arguments[3]) == 1 || 
         length == 4 && (strcmp(arguments[2], "female") == 0) && race_validator(arguments[3]) == 1) {
-            if (strcmp(arguments[1], "s") == 0) {
+            if (strcmp(arguments[1], "g") == 0) {
             return code = 4;
         } else if (strcmp(arguments[1], "s") == 0) {
-            return code = 8;
+            return code = 9;
         } else return code = 0;
     } else if (length == 2 && (strcmp(arguments[1], "h") == 0)) {
         return code = 5; 
@@ -178,8 +197,8 @@ void message_init() {
     printf("         \\>\n");
     printf("\n");
     printf("Welcome to NPC Random Generator.\n");
-    printf("If you want to generate an NPC, simply type [npc] follwed by [generate] or [g]\n");
-    printf("If you want to see the options or other details, type [npc] follwed by [help] or [h].\n");
+    printf("If you want to generate an NPC, simply type [./npc] follwed by [g]\n");
+    printf("If you want to see the options or other details, type [./npc] follwed [h].\n");
 }
 
 void print_npc(npc npc) {
