@@ -5,4 +5,5 @@
 #define APPEARANCES_PATH "./sources/appearance.txt"
 #define ORIGINS_PATH "./sources/origins.txt"
 #define TALENTS_PATH "./sources/talents.txt"
-#define BEHAVIOURS_PATH "./sources/behaviour.txt"  
+#define BEHAVIOURS_PATH "./sources/behaviour.txt"
+#define SAVED_NPCS_PATH "./saved/"

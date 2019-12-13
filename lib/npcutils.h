@@ -25,10 +25,9 @@ int randomizer(int max_value);
 struct npc generateNPC(int length, char * arguments[]);
 void print_npc(npc npc);
 int argv_validator(int length, char * arguments[]);
-void save_npc(char * file_path);
+void save_npc(npc npc, char * file_path);
 int race_validator(char * race);
 void message_init();
 void message_error();
 void message_help();
-void message_npc();
 #endif
