@@ -3,3 +3,5 @@
 
 # Files to exlude
 *.exe
+*.o
+*.sh
