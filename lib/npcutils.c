@@ -67,7 +67,7 @@ struct npc generateNPC(int length, char * arguments[]) {
         } if (code == 3) {
             strcpy(npc.race, arguments[2]);
         } if (code == 4) {
-            strcpy(npc.race, pickLine(arguments[3]));
+            strcpy(npc.race, arguments[3]);
             if(strcmp(arguments[2], "male") == 0) {
                 strcpy(npc.gender, "male");
                 strcpy(npc.pronoun_upper, "He");
