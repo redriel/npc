@@ -1,5 +1,5 @@
 commoner
-nobil
+noble
 merchant
 old-time adventurer
 novice adventurer

@@ -173,7 +173,7 @@ Cutler
 Coggins
 Cates
 Crisp
-Curio 
+Curio
 Creed
 Costner
 Cortse
@@ -209,7 +209,7 @@ Copeland
 Celino
 Coffin
 Cena
-Conti 
+Conti
 Coin
 Connelly
 Cents
@@ -347,7 +347,7 @@ Fletcher
 Floris
 Flynn
 Fairbanks
-Fawzi 
+Fawzi
 Finau
 Floquet
 Fleiss
@@ -501,7 +501,7 @@ Keys
 Kaufman
 Kersey
 Keating
-Kotek 
+Kotek
 Kuchar
 Katts
 Kilmer
@@ -644,7 +644,7 @@ Nunley
 Nighy
 Overholt
 Ogletree
-Opilio 
+Opilio
 October
 Ozu
 O'Rourke
@@ -851,7 +851,7 @@ Tucker
 Theo
 Thain
 Trapp
-Trumbald 
+Trumbald
 Trench
 Terrella
 Tait

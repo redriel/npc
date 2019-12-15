@@ -3,6 +3,7 @@
 #define BUFF_SIZE_SHORT 32
 #define BUFF_SIZE_MEDIUM 128
 #define BUFF_SIZE_LONG 256
+#define BUFF_SIZE_ULTRA 512
 
 typedef struct npc generated_npc;
 

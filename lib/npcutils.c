@@ -200,12 +200,32 @@ void message_init() {
 }
 
 void print_npc(npc npc) {
-    printf("You meet a %s %s named %s %s.\n", npc.gender, npc.race, npc.name, npc.surname);
-    printf("%s appears %s.\n", npc.name, npc.abilities);
-    printf("You notice %s has %s.\n", npc.pronoun_lower, npc.appearance);
-    printf("%s tells you %s is a %s.\n", npc.pronoun_upper, npc.pronoun_lower, npc.origins);
-    printf("Few knows that %s %s.\n", npc.name, npc.talents);
-    printf("%s seems %s.\n", npc.name, npc.behaviour);
+    char npc_text[BUFF_SIZE_ULTRA];
+    sprintf(npc_text, "You meet a %s %s named %s %s. %s appears %s. You notice %s has %s. %s tells you %s is a %s. Few knows that %s %s. %s seems %s.", npc.gender, npc.race, npc.name, npc.surname, npc.name, npc.abilities, npc.pronoun_lower, npc.appearance, npc.pronoun_upper, npc.pronoun_lower, npc.origins, npc.name, npc.talents, npc.name, npc.behaviour);
+    // I'm extremly sorry for this mess of code.
+    // Let's say it just works.
+    char flines[20][40];
+    int i = 0, j = 0, k = 0, ps = 0;
+    while (i < 10 && k <= strlen(npc_text)) {
+        if(j <= 32) {
+            flines[i][j] = npc_text[k];
+            j++;
+            k++;
+        } else {
+            ps = j;
+            while (flines[i][ps] != ' ') {
+                ps--;
+            }
+            flines[i][ps] = '\0';
+            j--;
+            i++;
+            k = k - (j - ps);
+            j = 0;
+        }
+    }
+    for (int n = 0; n <= i && strlen(flines[i]) > 0; n++){
+      printf("%s\n", flines[n]);
+    }
 }
 
 void message_error() {

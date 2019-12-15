@@ -1,12 +1,12 @@
-powerful, brawny, strong as an ox, showing great [Strenght]
-feeble, scrawny and weak, showing little [Strenght]
-lithe, agile, graceful, showing impressive [Dexterity]
-clumsy, fumbling, showing little-to-none [Dexterity]
-hardy, hale, healthy, showing excellent [Constitution]
-sickly, pale, showing poor [Constitution]
-studious, learned, inquisitive, showing amazing [Intelligence]
-dim-witted, slow, showing low [Intelligence]
-perceptive, spiritual, insightful, showing great [Wisdom]
-oblivious, absentminded, showing poor [Wisdom]
-persuasive, forceful, born leader, showing high [Charisma]
-dull, boring, showing no [Charisma]
+powerful, brawny, strong as an ox, showing great Strength
+feeble, scrawny and weak, showing little Strength
+lithe, agile, graceful, showing impressive Dexterity
+clumsy, fumbling, showing little-to-none Dexterity
+hardy, hale, healthy, showing excellent Constitution
+sickly, pale, showing poor Constitution
+studious, learned, inquisitive, showing amazing Intelligence
+dim-witted, slow, showing low Intelligence
+perceptive, spiritual, insightful, showing great Wisdom
+oblivious, absentminded, showing poor Wisdom
+persuasive, forceful, born leader, showing high Charisma
+dull, boring, showing no Charisma
